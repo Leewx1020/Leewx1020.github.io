@@ -89,13 +89,29 @@
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/demo_connect.jpeg" alt=""width="600" height="600"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/arduino_connect.jpeg" alt=""width="600" height="600"/>
 																       
-	<h3 id="task-1-echo">Task 1: ECHO</h3>
+	<h3 id="task-1-echo">Task 1: ECHO</h3>	
+	<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+	* Your code goes here.
+             */
+             tx_estring_value.clear();
+             tx_estring_value.append("Robot says->");
+             tx_estring_value.append(char_arr);
+             tx_estring_value.append(":)");
+             tx_characteristic_string.writeValue(tx_estring_value.c_str());
+             Serial.print(tx_estring_value.c_str());
+            break;
+        /*
+	</code></pre></div></div>
 		<p></p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/echo.jpeg"/>
+	 
 	
 	<h3 id="task-2-get_time_millis">Task 2: GET_TIME_MILLIS</h3>
 			    
 			    
 	<h3 id="task-3-echo">Task 3: ECHO</h3>
+			    
+	
 
 		      
 			
