@@ -88,7 +88,9 @@
 		And then, the serial monitor will automatically show the connection. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/demo_connect.jpeg" alt=""width="600" height="600"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/arduino_connect.jpeg" alt=""width="600" height="600"/>
-																       
+						
+																      
+																      
 	<h3 id="task-1-echo">Task 1: ECHO</h3>	
 	<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 	* Your code goes here.
@@ -105,20 +107,41 @@
 		<p></p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/echo.jpeg" alt=""width="600" height="600"/>
 	 
+		
 	
 	<h3 id="task-2-get_time_millis">Task 2: GET_TIME_MILLIS</h3>
-			    
+	<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+	case GET_TIME_MILLIS:
+             tx_estring_value.clear();
+             tx_estring_value.append("T:");
+             tx_estring_value.append((int)millis());
+             tx_characteristic_string.writeValue(tx_estring_value.c_str());
+             break;
+	</code></pre></div></div>
+		<p></p>
+		
+		
 			    
 	<h3 id="task-3-notification-handler">Task 3: Notification Handler</h3>
+		
+		
 		
 	
 	<h3 id="task-4-get-temp-5s">Task 4: GE_TEMP-5s</h3>
 		
 		
+		
+		
+		
 	<h3 id="task-5-get-temp-5s-rapid">Task 5: GE_TEMP-5s_RAPID</h3>
 		
 		
+		
+		
 	<h3 id="task-6">Task 6: </h3>
+		
+		
+		
 		
 		
 	<h3 id="additional-task-for-5000-level-student">Additional Task for 5000 Level Student</h3>
