@@ -129,8 +129,23 @@
 		
 	
 	<h3 id="task-4-get-temp-5s">Task 4: GE_TEMP-5s</h3>
-		
-		
+	<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+	case GET_TEMP_5s:
+             tx_estring_value.clear();
+             for (int i = 1; i <5; i++){
+                tx_estring_value.append("T:");
+                tx_estring_value.append((float)(millis()/1000));
+                tx_estring_value.append("|C:");
+                tx_estring_value.append(getTempDegC());
+                if (i !=4){
+                  tx_estring_value.append("|");
+                }
+                delay(1000);
+             }
+          tx_characteristic_string.writeValue(tx_estring_value.c_str());
+		break;
+	</code></pre></div></div>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/task4.jpeg" alt=""width="600" height="600"/>
 		
 		
 		
