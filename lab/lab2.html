@@ -144,12 +144,12 @@
 	<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 	case GET_TEMP_5s:
              tx_estring_value.clear();
-             for (int i = 1; i <5; i++){
+             for (int i = 1; i <6; i++){
                 tx_estring_value.append("T:");
                 tx_estring_value.append((float)(millis()/1000));
                 tx_estring_value.append("|C:");
                 tx_estring_value.append(getTempDegC());
-                if (i !=4){
+                if (i !=5){
                   tx_estring_value.append("|");
                 }
                 delay(1000);
@@ -171,7 +171,24 @@
 		
 		
 	<h3 id="task-5-get-temp-5s-rapid">Task 5: GE_TEMP-5s_RAPID</h3>
-		
+	<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+	case GET_TEMP_5s_RAPID:
+            for(int j = 0; j <11; j++){
+             tx_estring_value.clear();
+             for (int i = 1; i <6; i++){
+                tx_estring_value.append("T:");
+                tx_estring_value.append((float)(millis()/1000));
+                tx_estring_value.append("|C:");
+                tx_estring_value.append(getTempDegC());
+                tx_estring_value.append("|");
+                delay(100);
+                }
+          tx_characteristic_string.writeValue(tx_estring_value.c_str());
+            }
+          break;
+	</code></pre></div></div>
+		<p></p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/task5.jpeg" alt=""width="600" height="600"/>
 		
 		
 		
@@ -181,7 +198,6 @@
 		So, 384 kB = 8000 * 384 = 3072000 bits. The Artemis board can receive the form of 16-bit values with 16 * 150 * 5 = 12000 bits every time. 
 		3072000 / 12000 = 256. Therefore, the limitation of this problem is that the Artemis board can receive 256 times of 
 		16-bit value with 150 Hz in 5 seconds before running out of memory. </p>
-		
 		
 		
 		
