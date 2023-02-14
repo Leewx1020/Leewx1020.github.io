@@ -105,7 +105,11 @@
         /*
 	</code></pre></div></div>
 		<p>The first task is required to send the string from the computer to the Artemis board and get the augmented string from 
-		the board to the computer. I use the example command provided in ble_arduino, "tx_estring_value", to accomplish that. </p>
+		the board to the computer. I use the example command provided in ble_arduino, "tx_estring_value", to accomplish that. 
+		And then, use the "append" syntax to add the required format. 
+		In the end, the "tx_characteristic_string" is helpful to send the message to the Artemis board.  </p>
+		<p>For the Python code, the most essential thing is to check the "cmd_type" file and add the cmd name. 
+		The code in Arduino is shown above and the code in Python is shown below. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/echo.jpeg" alt=""width="600" height="600"/>
 	 
 		
