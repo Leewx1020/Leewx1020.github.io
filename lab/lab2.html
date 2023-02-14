@@ -209,8 +209,31 @@
 		
 	<h3 id="additional-task-for-5000-level-student">Additional Task for 5000 Level Student</h3>
 			 
-	
+	<h3 id="additional-task-1">Additional Task 1</h3>
+	<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+	case SEND_STRING:
 
+              char char_arr1[MAX_MSG_SIZE];
+              success = robot_cmd.get_next_value(char_arr1);
+              if (!success)
+                  return;
+              tx_estring_value.clear();
+              tx_estring_value.append(char_arr1);
+              tx_characteristic_string.writeValue(tx_estring_value.c_str());
+
+              Serial.print("Sent back: ");
+              Serial.println(tx_estring_value.c_str());
+              break;
+	</code></pre></div></div>
+		
+		<p>In this problem, I use Vincent Lu's Lab from 2022 as a reference. 
+		I create a new command called SEND_STRING to send the string from the computer and then receive a reply from the Artemis board. 
+		I use the syntax from the python library called "time.time" to record the current send and receive time. 
+		Then, we can get the specific time difference. The outer for loop is helpful to increment the message size and the inner 
+		for loop is trying to get the data 6 times to improve the accuracy. Then the data rate can be calculated as shown below. 
+		And the Arduino code is provided above. </p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab2/task6.jpeg" alt=""width="600" height="600"/>
+		
 		      
 			
 			
