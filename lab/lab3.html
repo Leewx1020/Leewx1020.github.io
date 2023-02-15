@@ -61,10 +61,20 @@
 		
 	<h3 id="objective">Objective</h3>
 		<p>This lab mainly focuses on the performance of sensors connecting to the robot. 
-		We have to fully understand how the ToF works and test the sensor's mode, speed, and reliability. </p>
+		We have to fully understand how the ToF works and test the sensor's mode, speed, and reliability. 
+		In this lab, we will also learn how to do soldering. </p>
 		
 	
 	<h3 id="prelab-discussion">Prelab Discussion</h3>
+		<p>By checking the datasheet provided in the lab guideline for the VL53L1X,
+		the device has a maximum speed of 400 kbits/s and the I2C address is 0x52.</p>
+		Normally, the ToF is connected with the Artemis individually and the I2C address is not a big problem even if two 
+		ToF has the same address number. In some situations, when we want the two ToF to connect with the Artemis board at the same time, 
+		only one ToF can work because they have the same I2C address. 
+		To solve it, one of the sensor should add an extra wire to connect with the XSHUT on the ToF and pin8 on the Artemis board. 
+		In Arduino code, we could first set the XSHUT as LOW to shut down one sensor, 
+		and then we have to change the I2C address for the other sensor.  After that, we could reset the XSHUT to HIGH. 
+		These two ToF then will have a different addresses and they can work well at the same time. </p>
 		
 		
 		
