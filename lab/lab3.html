@@ -96,6 +96,19 @@
 		
 		
 	<h3 id="task-3-sensor-data">Task 3: Sensor Data</h3>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab3/I2C.jpeg" alt=""width="600" height="600"/>
+		<p>The table above is the Maximum distance vs. Distance mode under the ambient light table from the datasheet. 
+		There are three different modes in total: short, medium, and long. We can get some simple relationships from the data provided. 
+		With the long-distance mode, it has the biggest impact under strong ambient light. 
+		And the short-distance mode has almost no impact under strong ambient light. </p>
+		<p>For the robot, it should be better to choose the short-distance mode. 
+		The robot is always used in some dangerous, dark, or accuracy-needed situations. 
+		So, it is important to exclude the surrounding impact. </p>
+		<p>With the short-distance mode, I gathered the data about measured distance and actual distance by using the code found in "Example1_ReadDistance". 
+		The plot shown below is made by MATLAB. </p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab3/task3.jpeg" alt=""width="600" height="600"/>
+		The distance measured is very accurate that two lines on the plot only have a very small gap.
+		But as the distance gets bigger, it becomes less accurate. The rannging time is around 54ms.</p>
 		
 		
 		
@@ -106,7 +119,7 @@
 	<h3 id="task-5-tof-sensor-speed">Task 5: ToF Sensor Speed</h3>
 		
 		
-	<h3 id="task-6-time-vs.-distance">Task 4: Time vs. Distance</h3>
+	<h3 id="task-6-time-vs.-distance">Task 6: Time vs. Distance</h3>
 		
 		
 	<h3 id="Additional-tasks-for-5000-level-students">Additional tasks for 5000-level students</h3>
