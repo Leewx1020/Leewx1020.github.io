@@ -113,7 +113,11 @@
 		
 		
 	<h3 id="task-4-2-tof-sensor">Task 4: 2 ToF Sensor</h3>
-		
+		<p>By using the method mentioned in the prelab discussion, I first use the command "digitalWrite(8, LOW);" 
+		to shut down the XSHUT connecting with pin 8 on the Artemis board. 
+		Then, "distanceSensor1.setI2CAddress" is helpful to change the I2C address of the other ToF. 
+		The last step is to change the voltage of the XSHUT by using the similar idea of "digitalWrite(8, HIGH);". 
+		Then, two ToF can run together with different I2C addresses. The video below shows the result of two sensors running parallel. </p>
 	<iframe width="560" height="315"  
  	src="https://www.youtube.com/embed/laE1VA7QTAY"  
  	frameborder="0" allowfullscreen></iframe>
