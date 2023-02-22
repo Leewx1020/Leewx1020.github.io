@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <title>Wenxin Li</title>
+  <title>LAB4</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -58,12 +58,17 @@
 	<h2 id="lab-4">Lab 4 - IMU</h2>
 		
 	<h3 id="task-1-set-up-the-imu">Task 1: Setup The IMU</h3>
-		
+		<p>The picture below shows the picture of my Artemis IMU connections.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/setup.jpeg" alt=""width="500" height="500"/>	
+		<p>To set it up, we have to first install the SparkFun 9DOF IMU Breakout from the library manager. 
+		Then, the example code can be found from example/SparkFun 9DOF IMU Breakout/Arduino/Example1_Basics. 
+		The IMU code works perfectly and I attached the screenshot of the Serial Monitor below.</p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/works.jpeg" alt=""width="500" height="500"/>
+		<p>The AD0_VAL has two values, 0 and 1. The definition of the AD0_VAL is the value of the last bit of the I2C address. 
+		The default value of the IMU is 1, and when the ADR jumper is connected, the value becomes 0. 
+		In this lab, we do not have the ADR jumper, so the AD0_VAL we set should be 1. </p>
 		
-	
-		
-		
+			
 	<h3 id="task-2-Accelerometer">Task 2: Accelerometer</h3>
 		
 		
