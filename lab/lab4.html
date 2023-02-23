@@ -74,21 +74,26 @@
 		
 			
 	<h3 id="task-2-Accelerometer">Task 2: Accelerometer</h3>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/equation.jpeg" alt=""width="300" height="300"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/equation.jpeg" alt=""width="100" height="100"/>
 		<p>To convert accelerometer data into pitch and roll, I use the equation posted in the lecture, which is shown above. 
 		The Arduino code for that are "float pitch_a = atan2(myICM.accX(),myICM.accZ())*180/M_PI;", 
 		and "float roll_a = atan2(myICM.accY(),myICM.accZ())*180/M_PI;". To use M_PI, 
-		we have to add "#include <math.h>" at the very beginning.
+		we have to add "#include math.h" at the very beginning.
 		The two pictures shown below are the SerialPlot screenshots for pitch and roll moving from -90 to 0, and then to 90 degrees. 
 		The first one is pitch and the second one is roll. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/pitch.jpeg"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/roll.jpeg"/>
-		
+		<p>As we can see in the screenshots, even though there's a little noise, the angle we get is pretty accurate. 
+		It seems to only have a 1-degree difference between the angle we want, so overall, it performs well.</p>
+		<p>I use the "Fourier Transform in Python" example as a reference to get the fft for the pitch and roll data separately. 
+		In my data set, I set the sample rate as 50, and it gathered in 2 seconds. So, I will have 50*2 = 100 data points in total. 
+		Four pictures below are the result of this task and they are all perfectly labeled. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/time_pitch.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/freq_pitch.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/time_roll.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/freq_roll.jpeg" alt=""width="500" height="500"/>	
-		
+		<p>By looking at the result of the Frequency Domain Signal for both pitch and roll, the amplitude is all nearly within the value of 2. 
+		I don't think we need to add any low-pass filter for that. </p>
 		
 		
 		
