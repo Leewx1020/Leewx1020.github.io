@@ -116,9 +116,19 @@
 	<iframe width="560" height="315"  
  	src="https://www.youtube.com/embed/4mIt2KBn55w"  
  	frameborder="0" allowfullscreen></iframe>
-	
+		<p>I rotate the IMU board in three different ways and each way will correspond to pitch, roll, and yaw. 
+			The plot in the video is reasonable. </p>
 		
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/equation3.jpeg" alt=""width="300" height="300"/>
+		
+		<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+		complimentary_roll = (complimentary_roll + roll_g*dt)*(1-0.1) + roll_a*0.1;
+		complimentary_pitch = (complimentary_pitch + pitch_g*dt)*(1-0.1) + pitch_a*0.1;
+		</code></pre></div></div>
+		
+		<p>Adding a complimentary filter is useful here, as shown in the video, the plot becomes more smooth, which means it reduces the noise. 
+		The equation I use is getting from the lecture notes and I set the alpha value to 0.1 to get the best performance. 
+		After adding the such filter, our IMU will be not susceptible to drift or quick vibrations.</p>
 		
 	<iframe width="560" height="315"  
  	src="https://www.youtube.com/embed/hVHZFa6kcbM"  
@@ -151,12 +161,16 @@
 		
 		
 	<h3 id="task-6-Record-a-Stunt">Task 6: Record a Stunt</h3>
-		<p>The video below is the Stunt without the Artemis board.</p>
+		<p>The video below is the Stunt without the Artemis board. I can feel the RC car is very sensitive to the controller. 
+			It moves backward and forward very fast. </p>
 	<iframe width="560" height="315"  
  	src="https://www.youtube.com/embed/obZ4E6_h5Xo"  
  	frameborder="0" allowfullscreen></iframe>
 		
-		
+		<p>The video below is the Stunt with the Artemis board. And I gather the data from the Artemis board and plot it in Python.</p>
+	<iframe width="560" height="315"  
+ 	src="https://www.youtube.com/embed/"  
+ 	frameborder="0" allowfullscreen></iframe>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/tof.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/acc.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/gyr.jpeg" alt=""width="500" height="500"/>
