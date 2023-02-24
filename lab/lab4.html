@@ -127,7 +127,13 @@
 		
 		
 	<h3 id="task-4-Sample-Data">Task 4: Sample Data</h3>
-		
+		<p>As we can see from the data screenshot, the speed of sampling is about 2-5 milliseconds when gathering one set of data. </p>
+		<p>To get the data through Bluetooth, I use a similar idea from lab 2. 
+		I create the new case and use "tx_estring_value" to append all the ToF distances and IMU data we need. 
+		And then, I use the notification handler to receive the data from the Artemis to the computer. 
+		The two pictures below are the python code for the Notification handler and the data we finally get.</p> 
+		<p>There is one trick I should notice, if I store my data at such quick speed, I can not gather the data lasting 5 seconds. 
+		The Memory will be full as we discussed in lab 3.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/note.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/data.jpeg" alt=""width="400" height="400"/>
 	
@@ -145,6 +151,7 @@
 		
 		
 	<h3 id="task-6-Record-a-Stunt">Task 6: Record a Stunt</h3>
+		<p>The video below is the Stunt without the Artemis board.</p>
 	<iframe width="560" height="315"  
  	src="https://www.youtube.com/embed/obZ4E6_h5Xo"  
  	frameborder="0" allowfullscreen></iframe>
