@@ -99,7 +99,20 @@
 		
 	<h3 id="task-3-Gyroscope">Task 3: Gyroscope</h3>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/equation2.jpeg" alt=""width="300" height="300"/>
-	
+		<p>This task requires getting the angle from the Gyroscope value. I use the equation listed in the lecture slides to calculate it, which is shown above. 
+		The video below shows the resulting angle change as I rotate my IMU board. </p>
+		
+               <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+		long time_current;
+		time_current=millis();
+		float dt;
+		dt=(float)(time_current-time_previous)*0.001;
+		time_previous=time_current;
+		pitch_g = pitch_g - (sensor->gyrX())*dt;
+ 		roll_g = roll_g + (sensor->gyrY())*dt;
+		yaw_g = yaw_g + (sensor->gyrZ())*dt;
+		</code></pre></div></div>
+		
 	<iframe width="560" height="315"  
  	src="https://www.youtube.com/embed/4mIt2KBn55w"  
  	frameborder="0" allowfullscreen></iframe>
@@ -117,9 +130,7 @@
 		
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/note.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/data.jpeg" alt=""width="400" height="400"/>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/tof.jpeg" alt=""width="500" height="500"/
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/acc.jpeg" alt=""width="500" height="500"/>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/gyr.jpeg" alt=""width="500" height="500"/>
+	
 		
 		
 	
@@ -137,4 +148,9 @@
 	<iframe width="560" height="315"  
  	src="https://www.youtube.com/embed/obZ4E6_h5Xo"  
  	frameborder="0" allowfullscreen></iframe>
+		
+		
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/tof.jpeg" alt=""width="500" height="500"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/acc.jpeg" alt=""width="500" height="500"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab4/gyr.jpeg" alt=""width="500" height="500"/>
 
