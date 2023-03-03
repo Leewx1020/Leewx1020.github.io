@@ -77,13 +77,24 @@
           
   <h3 id="task-1">Task 1: Dual Motor Driver and PWM Testing</h3>
           
+       <p>In this task, I test the left side motor as I draw in the diagram shown in the prelab. 
+	The code to generate PWM signals is also shown below. 
+	I set up the pin number and then use the analogWrite to get the power for the motor driver output. 
+	The PWM range is ranging from 0 to 255, so I choose a number almost in the middle to test it. 
+	Here, we still need to use the external power supply. I set the voltage as 3.7V, which is the same as the battery provided in this course. 
+	The voltage can not be too high, otherwise, the Artemis will be broken. </p>
+		
+  <img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab5/pwm.jpeg" alt=""width="500" height="500"/>
+	<p>I use the red and black wire from the power supply to connect the Vin and GND of the motor driver. 
+	Two black wires from the oscilloscope should also be connected to the GND. 
+	And the two red wires will connect with these two wires from the "out" side of the motor driver. 
+	The connection is shown at the very beginning of the video below. And as you can see, on the screen of the oscilloscope, 
+	the voltage oscillates in the proper range, which is what we expected.</p>
   <iframe width="560" height="315"  
   src="https://www.youtube.com/embed/YM-BYB00HXk"  
-  frameborder="0" allowfullscreen></iframe>        
-  	    
+  frameborder="0" allowfullscreen></iframe>
 		
 		
-          
   <h3 id="task-2">Task 2: Wheels Spinning</h3>
           
        
