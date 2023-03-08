@@ -138,19 +138,37 @@
 		
   <h3 id="task">Task 5: PWM Value Discussion</h3>
           
-		
+	<p>To find the lower limit of the PWM, I change the PWM value from the analogWrite. 
+	Starting from 10, I gradually add up the value and test it on the floor to see whether it is effective to move. 
+	After several test, I found around 45 is the lower limit of the PWM.</p>	
 		
 		
           
   <h3>Task 6: Calibration Demonstration</h3>
-          
-          
+        <p>I set the PWM value as 50 to do the calibration implementation. 
+	When I set the same PWM value to both motors. 
+	As you can see in the video shown below, the RC car is drifting to the left.</p>
+  <iframe width="560" height="315"  
+  src="https://www.youtube.com/embed/WZrQN9cw3T8"  
+  frameborder="0" allowfullscreen></iframe>
 		
+	　<p>To calibrate that, I have to increase the PWM value of the left-side motor to increase the voltage applied to the motor, 
+	which will increase the wheel speed. After several tries, I found that if the PWM value from the left side can be times 2, 
+	the car can almost move in a straight line. In the video below, there is still a little bit of drifting to the left. 
+	It is because the starting direction is not strictly straight, so it will cause some inevitable error. </p>
+		
+  <iframe width="560" height="315"  
+  src="https://www.youtube.com/embed/9eu41opSFGk"  
+  frameborder="0" allowfullscreen></iframe>		
+	
 		
   <h3>Task 7: Open Loop Code and Video</h3>   
           
-          
-          
+	<p>The video and the code below shows how the car acts when I add an extra set of code to make it turn right.</p>
+  <img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab5/turn.jpeg" alt=""width="500" height="500"/>
+  <iframe width="560" height="315"  
+  src="https://www.youtube.com/embed/tdH2jmt4xBE"  
+  frameborder="0" allowfullscreen></iframe>      
           
           
           
