@@ -62,12 +62,17 @@
 	<h3>Prelab</h3>
 		<p>I create a new Arduino code file and combine the necessary code from lab2 and lab3 to get a good setup for the Bluetooth and the 
 		ToF sensor. This is very similar to the task we did in lab 2. 
-		I create a case called PID_CONTROLL to set the data from Artemis to the computer. The code screenshot is shown below.</p> 
+		I first define all the variable I need as a global variable at the very top of the Arduino code.
+		The code screenshot is shown below. </p> 
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/define.jpeg" alt=""width="500" height="500"/>
+		<p>In this lab, I create three cases in the handler command section. 
+		The first one is called "SET_VAL", which is shown below. This is helpful to set the Kp, Ki, and Kd values in the Jupyter notebook. 
+		With this code, we do not need to upload the whole code to the Artemis board to test the PID value. </p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/setvalue.jpeg" alt=""width="500" height="500"/>
+		
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/controll.jpeg" alt=""width="500" height="500"/>
 		<p>Then in python code, we still need a notification handler to help to receive the data from Artemis. 
 		And then, we can get all the data needed by using the "send_command".</p>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/setvalue.jpeg" alt=""width="500" height="500"/>	
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/controll.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/python.jpeg" alt=""width="500" height="500"/>
 		
 	<h3>PID Discussion</h3>
