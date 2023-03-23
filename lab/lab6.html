@@ -64,7 +64,7 @@
 		ToF sensor. This is very similar to the task we did in lab 2. 
 		I first define all the variable I need as a global variable at the very top of the Arduino code.
 		The code screenshot is shown below. </p> 
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/define.jpeg" alt=""width="500" height="500"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/define.jpeg" alt=""width="400" height="400"/>
 		<p>In this lab, I create three cases in the handler command section. 
 		The first one is called "SET_VAL", which is shown below. This is helpful to set the Kp, Ki, and Kd values in the Jupyter notebook. 
 		With this code, we do not need to upload the whole code to the Artemis board to test the PID value. </p>
@@ -101,13 +101,23 @@
 		overcome the static friction. So, I set the deadband value to 45 in this lab and make a loop to prevent this kind of situation. 
 		The detailed code is shown in the next section. </p>
 	<h3>Graphs, code, videos, images, discussion of reaching task goal</h3>	
-		
+		<p>The code below is the main loop to set the PID control for the car. 
+		After calculating the PID_output value, I specify them into three big conditions to check if the sensor 
+		is close enough to the obstacle and then make the reaction of moving forward, backward, or stopping. 
+		In the moving conditions, I set two extra loops to prevent the PWM value from not greater than the max value 255 and not 
+		less than the deadband value 45. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/pid.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/forward.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/stop_back.jpeg" alt=""width="500" height="500"/>
-		
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/p2.jpeg" alt=""width="500" height="500"/>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/p1.jpeg" alt=""width="500" height="500"/>
+		<p>I first set I and D values to be 0 and tried to find an appropriate P value. 
+		I start from 0.001 and slowly increase that. Until getting to 0.09, the car performs well. 
+		The video below shows the car moving with P=0.09, I=0, and D=0.</p>
+	<iframe width="560" height="315"  
+  	src="https://www.youtube.com/embed/E-KolLwtdgQ"  
+  	frameborder="0" allowfullscreen></iframe>
+		<p>These two plots shown below are the Tof vs time and Motor input vs time with P=0.09, I=0, and D=0.</p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/p2.jpeg" alt=""width="400" height="400"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/p1.jpeg" alt=""width="400" height="400"/>
 		
 	<h3>(5000) Wind-up implementation and discussion</h3>
 		
