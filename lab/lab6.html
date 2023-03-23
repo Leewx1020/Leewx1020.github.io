@@ -110,15 +110,26 @@
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/forward.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/stop_back.jpeg" alt=""width="500" height="500"/>
 		<p>I first set I and D values to be 0 and tried to find an appropriate P value. 
-		I start from 0.001 and slowly increase that. Until getting to 0.09, the car performs well. 
-		The video below shows the car moving with P=0.09, I=0, and D=0.</p>
+		I start from 0.001 and slowly increase that. Until getting to 0.06, the car performs well. 
+		The video below shows the car moving with P=0.06, I=0, and D=0.</p>
 	<iframe width="560" height="315"  
   	src="https://www.youtube.com/embed/E-KolLwtdgQ"  
   	frameborder="0" allowfullscreen></iframe>
-		<p>These two plots shown below are the Tof vs time and Motor input vs time with P=0.09, I=0, and D=0.</p>
+		<p>These two plots shown below are the Tof vs time and Motor input vs time with P=0.06, I=0, and D=0.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/p2.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/p1.jpeg" alt=""width="400" height="400"/>
 		
+		<p>Then I have to add an I (Integral) controller. Before tunning it, I have to half the P value, which becomes 0.03. 
+		Then, I set the I value to 0.001 and found that it will hit the wall. So, the value should be even lower than 0.001. 
+		I decrease it and made several tries. When the I value equals 0.0005, the car performs the best. 
+		The video below shows the car's performance with P=0.03, I=0.0005, and D=0.</p>
+	<iframe width="560" height="315"  
+  	src="https://www.youtube.com/embed/x0hTf3HBITg"  
+  	frameborder="0" allowfullscreen></iframe>
+		<p>These two plots shown below are the Tof vs time and Motor input vs time with P=0.03, I=0.0005, and D=0.</p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/pi1.jpeg" alt=""width="400" height="400"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/pi2.jpeg" alt=""width="400" height="400"/>
+	
 	<h3>(5000) Wind-up implementation and discussion</h3>
 		
 	
