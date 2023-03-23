@@ -68,11 +68,12 @@
 		<p>In this lab, I create three cases in the handler command section. 
 		The first one is called "SET_VAL", which is shown below. This is helpful to set the Kp, Ki, and Kd values in the Jupyter notebook. 
 		With this code, we do not need to upload the whole code to the Artemis board to test the PID value. </p>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/setvalue.jpeg" alt=""width="500" height="500"/>
-		
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/setvalue.jpeg" alt=""width="400" height="400"/>
+		<p>The cases shown below are 
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/controll.jpeg" alt=""width="500" height="500"/>
 		<p>Then in python code, we still need a notification handler to help to receive the data from Artemis. 
-		And then, we can get all the data needed by using the "send_command".</p>
+		But before that, we need to send the command with the command type "SET_VAL" to set the PID value and "PID_CONTROLL" to make the car start moving. 
+		And then, the command type "DATA" can be run to store all the data monitored into array and ready to get the plot.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab6/python.jpeg" alt=""width="500" height="500"/>
 		
 	<h3>PID Discussion</h3>
