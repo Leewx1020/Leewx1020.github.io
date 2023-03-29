@@ -61,11 +61,21 @@
 	<h2>Lab 7 - Kalman Filter</h2>
 		
 	<h3>Estimate drag and momentum</h3>
+		<p>The picture provided below is the screenshot from the lecture notes. 
+		We have to find the steady-state velocity and the 90% of the rise time. 
+		Based on the data collected from step response, I generated the plots for the ToF, PWM, and velocity vs. time.</p> 
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/explain.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/dis.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/vel.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/pwm.jpeg" alt=""width="500" height="500"/>
+		<p>All the plot needed is provided above. The PWM I choose is 60, which is average of the motoroutput I get form lab 6. 
+		The car start moving 4m far from the wall to make sure it can reache the steady state velocity. 
+		From the plot, the steady-state velocity is 2100mm/s. 
+		The velocity plot is not perfect, but due to the low on time, I still choose to use this set of data. 
+		We could still realize the robot reaches the steady-state velocity and it lasts for a while. 
+		The 90% of the rise time can also get directly from the plot, which is around 1.5s. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/dm.jpeg" alt=""width="400" height="400"/>
+		
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/matrix.jpeg" alt=""width="400" height="400"/>
 		
 		
