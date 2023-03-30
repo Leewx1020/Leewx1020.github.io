@@ -83,17 +83,22 @@
 	<h3>Initialize KF</h3>
 		<p>Based on the term I found above, the state-space equation can be calculated by using the lecture notes provided at the very top. 
 		And then I discretize the matrices. The sampling time I use is the average sampling time from the step response. </p>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/matrix.jpeg" alt=""width="300" height="300"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/matrix.jpeg" alt=""width="250" height="250"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/ad_bd.jpeg" alt=""width="300" height="300"/>
-		The last step of the initialize the Kalman Filter are to initialize the state vector and specify process noise and sensor 
-		noise covariance matrices.
+		<p>The last step of the initialize the Kalman Filter are to initialize the state vector and specify process noise and sensor 
+		noise covariance matrices. Sigma 1 and 2 are set to be 10 for now and it will do some further adjustment in the next section.
+		Sigma 3 is set to be 20 based on the lecture provided. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/initial.jpeg" alt=""width="300" height="300"/>	
 		
 		
 	<h3>Implement and test your Kalman Filter in Jupyter</h3>
-		
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/implement.jpeg" alt=""width="500" height="500"/>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/draw.jpeg" alt=""width="300" height="300"/>
+		<p>By implementing the code example provided in the lab instruction for the Kalman Estimation, I can then run it to get the estimation data.
+		I rerun the lab 6 code to get a new set of data to do the sanity check. </p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/implement.jpeg" alt=""width="300" height="300"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/draw.jpeg" alt=""width="400" height="400"/>
+		<p>The picture provided below shows the sigma 1 and 2 adjustment process. 
+		The default value I set before is 10, which is not reach to what we expected. 
+		Therefore, I tried to increase the value until 70. The Kalman Filter can almost perfect fit the real data. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/10.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/30.jpeg" alt=""width="400" height="400"/>	
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/70.jpeg" alt=""width="400" height="400"/>	
