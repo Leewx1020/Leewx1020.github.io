@@ -75,11 +75,20 @@
 		We could still realize the robot reaches the steady-state velocity and it lasts for a while. 
 		The 90% of the rise time can also get directly from the plot, which is around 1.5s. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/dm.jpeg" alt=""width="400" height="400"/>
-		
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/matrix.jpeg" alt=""width="400" height="400"/>
+		<p>Based on the lecture notes provided, d = u/(steady-state velocity) and m = -d*(90% of the rise time)/ln(0.1). 
+		Note, we assume u = 1 for now. The picture above shows the calculation process in Python to get the drag and momentum. </p>
+	
 		
 		
 	<h3>Initialize KF</h3>
+		<p>Based on the term I found above, the state-space equation can be calculated by using the lecture notes provided at the very top. 
+		And then I discretize the matrices. The sampling time I use is the average sampling time from the step response. </p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/matrix.jpeg" alt=""width="300" height="300"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/ad_bd.jpeg" alt=""width="300" height="300"/>
+		The last step of the initialize the Kalman Filter are to initialize the state vector and specify process noise and sensor 
+		noise covariance matrices.
+		
+		
 		
 		
 		
