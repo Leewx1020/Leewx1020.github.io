@@ -94,7 +94,7 @@
 	<h3>Implement and test your Kalman Filter in Jupyter</h3>
 		<p>By implementing the code example provided in the lab instruction for the Kalman Estimation, I can then run it to get the estimation data.
 		I rerun the lab 6 code to get a new set of data to do the sanity check. </p>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/implement.jpeg" alt=""width="300" height="300"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/implement.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/draw.jpeg" alt=""width="400" height="400"/>
 		<p>The picture provided below shows the sigma 1 and 2 adjustment process. 
 		The default value I set before is 10, which is not reach to what we expected. 
@@ -104,7 +104,12 @@
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/70.jpeg" alt=""width="400" height="400"/>	
 		
 	<h3>Extrapolation</h3>
-		
-		
+		<p>When doing the extrapolation, we want to estimate the distance value between the sampling interval to make our robot to react faster.
+		So, first, we have to set the extrapolation time interval to be smaller than sampling interval. I set it to be half than before here. 
+		Then, arrange the time array and get the extrapolated data, which is similar as the task above. </p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/1.jpeg" alt=""width="300" height="300"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/2.jpeg" alt=""width="300" height="300"/>
+		<p>The plot including the extrapolation is shown below. </p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab7/last.jpeg" alt=""width="400" height="400"/>
 	
 		
