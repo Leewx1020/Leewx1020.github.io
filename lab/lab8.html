@@ -54,3 +54,27 @@
         <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-9 col-lg-9 col-xl-9">
+		
+	<h2>Lab 8 - Stunts!</p>
+		<p>After implementing the Kalman filter into the Arduino code and robot, we could use that to predict the sensor distance in this lab.
+		The code below shows that I made a if loop to determine when to use the real sensor value and when to use the predicted value,
+		which will make the robot react much faster.</p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab8/code1.jpeg" alt=""width="500" height="500"/>
+		<p>In the lab room, we should stop the robot right on the black pad to successfully do the flip. 
+		So, I have to change different distance value for stopping in the if loop below. I found 1450 is an appropriate one. 
+		The code below shows how I reach the goal of filpping in this lab.</p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab8/code2.jpeg" alt=""width="500" height="500"/>
+		<p>The video shown below is an interesting run. 
+		The robot successfully flip on the black pad, but it just go straight to the outside of the classroom.</p>
+	<iframe width="560" height="315"  
+  	src="https://www.youtube.com/embed/Js_ETqo7f0k"  
+  	frameborder="0" allowfullscreen></iframe>
+		<p>The video below is the successful run finished within 3s and come back to the original line. 
+		I do have a perfect one that go very straight to the wall and come back straight to the exact point of the starting point. 
+		Sadly, I forgot to record it.</p>
+	<iframe width="560" height="315"  
+  	src="https://www.youtube.com/embed/tdBAuQwPZYA"  
+  	frameborder="0" allowfullscreen></iframe>
+		<p>Based on several tries, I realize there're many other surrounding factors that might have a huge influence on the performance of the robot,
+		even though every run is using the same Arduino code.</p>
+		
