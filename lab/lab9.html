@@ -59,9 +59,21 @@
 	<h2>Lab 9 - Mapping</h2>
 	
 	<h3>Control</h3>
+		<p>In this lab, we are required to do the PID controlling for the IMU to get the surrounding map by turning the robot on-axis. 
+		I choose to achieve this using Angular speed control. The data collection is easier than doing the orientation control.
+		We can just get the angular speed by using the yaw value provided by the IMU. 
+		We just care about the rotation that is parallel to the floor, so yaw itself is good enough in this lab. 
+		In this case, the error in the PID calculation should be the yaw value minus the setpoint. 
+		I set it to be 15 to try to lower the rotational speed and controller will make sure our robot can rotate around the speed of 15 deg/ms
+		Then I apply the PID function to get the output and I only use P control here. 
+		The last step is to set the PWM value, which equals to the PID output value. 
+		My code is attached below.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/control1.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/control2.jpeg" alt=""width="300" height="300"/>
-		
+		<p>The video below shows my robot can successfully rotate at a relatively slow angular speed with just a small drift. 
+		It is driving in a straight circle, not on-axis. At very beginning, when I run my code, the left side of the wheel seems to stop.
+		I try both stick the tape on the wheels and do the PWM calibration, but both them are not working very well. 
+		The final version still contains the drift, but I don't think it will not have too much error, which is acceptable. </p>
 	<iframe width="560" height="315"  
   	src="https://www.youtube.com/embed/dbAs3rrZVz8"  
   	frameborder="0" allowfullscreen></iframe>
