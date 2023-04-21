@@ -106,12 +106,23 @@
 		
 		
 	<h3>Merge and Plot your readings</h3>
-		<p>map with x and y</p>	
+		<p>Then, to finally get the plot shown like a real map, we should convert our plot from polar coordinate into Cartesian coordinate.
+		I use the equation: x = distance * cos(theta) and y = distance * sin(theta) to get the x and y value. 
+		According to the material provided in Lecture 2 about the transformation matrics, I can relocate each set of data to the right position.
+		Because I start at the same orientation when doing the testing, there's no rotation happened. 
+		What I have to do is to deal with the translation. The point (0,0) is at the origin. 
+		Therefore, we need to do the translation manipulate for the rest of the points. 
+		The unit of the points coordinates are in feet, so I transfer them into mm by multiplying 300. 
+		The map for the 2 runs are shown below, which is pretty similar. </p>	
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/map1.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/map2.jpeg" alt=""width="500" height="500"/>
 		
 	<h3>Convert to Line-Based Map</h3>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/line1.jpeg" alt=""width="500" height="500"/>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/line2.jpeg" alt=""width="500" height="500"/>
+		<p>To convert the map into a format we can use in the simulator, I manually estimate where the actual walls and obstacles.
+		To do that, I estimate the coordinate of each turning corner and continuously refine for it by using the map for the run 1.
+		The points are listed below.
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/line3.jpeg" alt=""width="500" height="500"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/line1.jpeg" alt=""width="500" height="500"/>
+		<p>Then I apply the same line_based map onto the run2, it also fit perfectly.</p> 
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/line2.jpeg" alt=""width="500" height="500"/>
 	
