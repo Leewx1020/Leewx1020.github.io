@@ -77,7 +77,15 @@
 	<iframe width="560" height="315"  
   	src="https://www.youtube.com/embed/VmBiX8fUvJE"  
   	frameborder="0" allowfullscreen></iframe>
-		
+		<p>The plots below show the time vs. IMU data, ToF data, and the angle value I calculated by using the angular speed 
+		times the time difference. The plotted data is gathered from the testing point (-3,-2) in first run.
+		The distance plot is reasonable with some suddenly increased and decreased value.
+		For the angular velocity plot, I think I might mess up the unit. 
+		However, it seems that the rotational speed can be controlled at a constant value.
+		Then I calculate the sum of the angle andn the plot looks perfect with the range from 0 to 360.</p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/plot1.jpeg" alt=""width="300" height="300"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/plot2.jpeg" alt=""width="300" height="300"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/plot3.jpeg" alt=""width="300" height="300"/>
 		
 		
 	<h3>Read out Distances</h3>
@@ -85,17 +93,17 @@
 		There are five marked position on the floor, which labeled as (-3,-2), (5,-3), (0,3), (0,0),(5,3). 
 		We could use the robot to record the distance at these five points separtely. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/real_map.jpeg" alt=""width="400" height="400"/>	
-		<p>The plots below show the time vs. IMU data, ToF data, and the angle value I calculated by using the angular speed 
-		times the time difference. </p>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/plot1.jpeg" alt=""width="300" height="300"/>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/plot2.jpeg" alt=""width="300" height="300"/>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/plot3.jpeg" alt=""width="300" height="300"/>
-		<p>polar plot</p>
+		<p>The pictures shown below are the polar plot for each testing point. I did 2 runs in total and gathered them into the same plot.
+		It clear that it is more accurate when measuring the object with short distanc and with the distance increased, the accuracy will decrease.
+		As you can see on the plot, the shorter distance recorded for the run 1 and run 2 are almost overlaped, which means the data is exactly what I expected.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/1.jpeg" alt=""width="300" height="300"/>	
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/2.jpeg" alt=""width="300" height="300"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/3.jpeg" alt=""width="300" height="300"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/4.jpeg" alt=""width="300" height="300"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab9/5.jpeg" alt=""width="300" height="300"/>
+		<p>When recording the data, the sensor should start with the same orientation at each coordinate. 
+		To match the direction for the obstacles orientation shown in the real map, I rotate my data 90 degrees counterclockwise. </p>
+		
 		
 	<h3>Merge and Plot your readings</h3>
 		<p>map with x and y</p>	
