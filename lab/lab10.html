@@ -78,16 +78,27 @@
 	<h3>Compute Control</h3>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/dia.jpeg" alt=""width="300" height="300"/>	
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/2.jpeg" alt=""width="300" height="300"/>
+		<p>As you can see the figure and the equation provided above, both are got from the lecture materials. 
+		Those equations are directly derived from the figure with two circles and I use that to write the python code for "compute control" part.
+		Delta_rot_1 represents the angle rotated to reach the next state. Delta_trans shows the distance that needs to move to a new cell. 
+		And Delta_rot_2 is the angle rotated to reach the final state. 
+		I first derived all the x, y, and theta value for the current and previous state and do some simple math. 
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/code1.jpeg" alt=""width="600" height="600"/>
 		
 		
 	<h3>Odom motion model</h3>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/3.jpeg" alt=""width="400" height="400"/>	
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/3.jpeg" alt=""width="400" height="400"/>
+		<p>The function above is provided in the instruction for lab 10. It calculate the transition probability,
+		which represents the likelihood that the system will transition from its current state to a new state based on the control 
+		input or action taken. The actual u is gotten in the previous step, so I just call the function "compute control". 
+		Then I can use the gaussian function to impletment the odom motion model to get the probability value. 
+		I also include the mapper.normalize_angle function to normalize my angle value. </p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/code2.jpeg" alt=""width="600" height="600"/>	
 		
 		
 	<h3>Prediction step</h3>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/4.jpeg" alt=""width="500" height="500"/>	
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/4.jpeg" alt=""width="500" height="500"/>
+		
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/code3.jpeg" alt=""width="600" height="600"/>	
 		
 		
