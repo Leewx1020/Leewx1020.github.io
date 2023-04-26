@@ -119,13 +119,16 @@
 	<h3>Update step</h3>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/7.jpeg" alt=""width="500" height="500"/>
 		<p>In the update step part, we still use the similar loop shown in the prediction part to iterate the current pose. 
+		Each loc.bel belief can be derived by multiplying the result from function "sensor model" with the bayesian prediction.
 		Finally, we still need to normalize our value.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/code5.jpeg" alt=""width="700" height="700"/>	
 		
 	<h3>Video Result</h3>	
 		<p>Bayes filter can work in my sim robot very well. 
 		There are three lines inclued in the graph, which are the odometry values (red), the ground truth (green), and our belief (blue).
-		The video below shows the demonstration without the bel_bar.<p>
+		The video below shows the demonstration without the bel_bar. 
+		As you can see, the belief and the ground truth are close to each other as what we want. 
+		The Odometry line contains a lot of noise, so it is reasonable to get the performance like this.<p>
 	<iframe width="560" height="315"  
   	src="https://www.youtube.com/embed/sUNHeVhWilQ"  
   	frameborder="0" allowfullscreen></iframe>
