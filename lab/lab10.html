@@ -98,13 +98,20 @@
 		
 	<h3>Prediction step</h3>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/4.jpeg" alt=""width="500" height="500"/>
-		
+		<p>In the prediction part, I also call the "compute control" function to get the cur_odom and prev_odom as the input. 
+		Here, it uses the odometer motion with current and previous pose to predict u. 
+		I use 2 sets of loop, which is 6 in total to iterate the x, y, and theta value. 
+		Because there are two many loops contains in our calculations, our calculation speed will be reduced. 
+		To avoid that, I add an if statement to ignore the belief bel value that is smaller than 0.0001.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/code3.jpeg" alt=""width="600" height="600"/>	
 		
 		
 	<h3>Sensor model</h3>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/5.jpeg" alt=""width="200" height="200"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/6.jpeg" alt=""width="400" height="400"/>
+		<p>The sensor model is used to calculate the likelihood of the sensor measurements given the current state of the system.
+		By using the equation provided in the instruction, there are 18 reading values contains in the array. 
+		The probability array can be finally calculated by using the gaussian function again with the input storing in the "loc.obs_range_data".
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/code4.jpeg" alt=""width="600" height="600"/>	
 		
 		
