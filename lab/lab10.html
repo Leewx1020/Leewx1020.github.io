@@ -56,7 +56,21 @@
 
 	<h2>Lab 10 - Localization (sim)</h2>
 	
-	<h3>Pre-lab</h3>	
+	<h3>Pre-lab</h3>
+		<p>In this lab, we are required to use the Bayes filter to implement grid localization. 
+		In the pre-lab instruction, it provides us some background information and the lab description.
+		The state of the robot is defined as (x, y, theta).
+		The total number of cells along each axis are (12,9,18) with size of each grid cell) along the x , y and theta 
+		axes are 0.3048 m, 0.3048 meters and 20 degrees. 
+		<p>The Bayes filter algorithm typically involves two main steps: prediction and update.
+		In the prediction step, the algorithm uses the prior belief, 
+		the control input data, and the system model to predict the current state of the system. 
+		This prediction incorporates the knowledge of how the system is expected to behave based on the control input data and the model. 
+		However, there is always some uncertainty associated with this prediction due to noise or inaccuracies in the model.
+		In the update step, the algorithm uses the prediction, 
+		the observation data, and the sensor model to update the belief about the current state of the system. 
+		This update step reduces the uncertainty of the belief by incorporating the measurement data. 
+		The resulting estimate of the current state of the system is called the posterior belief. The detailed equation can be found below.<p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/1.jpeg" alt=""width="500" height="500"/>
 		
 		
@@ -86,7 +100,7 @@
 		
 	<h3>Update step</h3>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/7.jpeg" alt=""width="500" height="500"/>
-	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/code5.jpeg" alt=""width="600" height="600"/>	
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab10/code5.jpeg" alt=""width="700" height="700"/>	
 		
 	<h3>Video Result</h3>	
 	<iframe width="560" height="315"  
