@@ -58,7 +58,18 @@
 		
 	<h3>Task 1 - Test Localization in Simulation</h3>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/task1.jpeg" alt=""width="500" height="500"/>
+		<p>The picture above shows the Localization testing in Simulation with the red line represents odometry reading, green line represents
+		the ground truth, and the blue line represents the belief. The testing is what we expected as the result shown in lab 10. </p>
 		
-	<h3>Task 2 - 
+	<h3>Task 2 - Implementation</h2>
+		<p>To do the localization in the real map, we are required to get the ToF sensor data every 20 degrees rotation. 
+		So, we need to make our robot rotate from 0 degree and stop at the 360 degrees with 20 degree increments. 
+		The picture below shows the Aruduino side of implementation.
+		The code for this lab is modified based on lab 9. In lab 9, I use the rate of change of angle to control the robot,
+		but here, I use the angle to do the P control.</p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/1.jpeg" alt=""width="500" height="500"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/2.jpeg" alt=""width="500" height="500"/>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/3.jpeg" alt=""width="500" height="500"/>
+		<p>Then, I need to implement my python code. I implement the notification handler and arrange the data receeived into a numpy array.
 		
 		
