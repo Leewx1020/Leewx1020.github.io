@@ -64,12 +64,30 @@
 	<h3>Task 2 - Implementation</h2>
 		<p>To do the localization in the real map, we are required to get the ToF sensor data every 20 degrees rotation. 
 		So, we need to make our robot rotate from 0 degree and stop at the 360 degrees with 20 degree increments. 
-		The picture below shows the Aruduino side of implementation.
+		The number of the data set is 18. The picture below shows the Aruduino side of implementation.
 		The code for this lab is modified based on lab 9. In lab 9, I use the rate of change of angle to control the robot,
 		but here, I use the angle to do the P control.</p>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/1.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/2.jpeg" alt=""width="500" height="500"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/3.jpeg" alt=""width="500" height="500"/>
 		<p>Then, I need to implement my python code. I implement the notification handler and arrange the data receeived into a numpy array.
+		To get the array that we required, I also apply the code "np.array(array)[np.newaxis].T" to convert the list to a numpy column array.
+		Finally, I return the ToF sensor values and the angle values array as we expected.</p>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/4.jpeg" alt=""width="500" height="500"/>	
+		
+	<h3>(-3 ft ,-2 ft ,0 deg)</h3>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/.jpeg" alt=""width="500" height="500"/>
+		
+	
+	<h3>(0 ft,3 ft, 0 deg)</h3>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/2.jpeg" alt=""width="500" height="500"/>	
+		
+		
+	<h3>(5 ft,-3 ft, 0 deg)</h3>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/2.jpeg" alt=""width="500" height="500"/>	
+		
+		
+	<h3>(5 ft,3 ft, 0 deg)</h3>
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab11/2.jpeg" alt=""width="500" height="500"/>	
 		
 		
