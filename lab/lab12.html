@@ -60,21 +60,30 @@
 	<h2>Lab 12 - Path Planning and Execution</h2>
 	
 	<h3>Objective</h3>
+		<p>The last lab is required to make the robot passing every point shown below as quickly and accurately as possible.</p> 
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/point.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/pic.jpeg" alt=""width="400" height="400"/>
-	
+		<p>The method I use is applying the PID control directly without localization,
+		because localization requires the rotate 360 to check the localization when the robot move to the new place, which is very time-cosuming.
+		And also, as the result shown in the lab 11, the localization is not very accurate. 
+		However, the most importance factor to choose this method is that the PID implementation is easier.</p>
 		
 	<h3>Code Implementation</h3>
+		<p>The implement the PID control, I 
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/1.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/2.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/3.jpeg" alt=""width="400" height="400"/>
+		<p>The code below are the screenshots for the robot turning. 
+		I set the clockwise direction as positive, so, I name it as turn right. 
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/4.jpeg" alt=""width="400" height="400"/>
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/5.jpeg" alt=""width="400" height="400"/>
-		
+		<p>The picture below shows the python code. The distance shown in every "move_forward" is measured in the real map.
+		I run the robot in the lab classroom and get the most appropriate distance to increase the accuracy. </p>
 		
 		
 		
 	<h3>Video demonstration and Discussion</h3>
+		<p>The video below shows the robot can pass each point successfully.
 	<iframe width="560" height="315"  
   	src="https://www.youtube.com/embed/"  
   	frameborder="0" allowfullscreen></iframe>
