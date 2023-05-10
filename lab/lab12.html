@@ -79,13 +79,21 @@
 	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/5.jpeg" alt=""width="400" height="400"/>
 		<p>The picture below shows the python code. The distance shown in every "move_forward" is measured in the real map.
 		I run the robot in the lab classroom and get the most appropriate distance to increase the accuracy. </p>
-		
+	<img class="img-responsive" src="https://leewx1020.github.io/lab_pic/lab12/command.jpeg" alt=""width="400" height="400"/>	
 		
 		
 	<h3>Video demonstration and Discussion</h3>
-		<p>The video below shows the robot can pass each point successfully.
+		<p>The video below shows the robot can pass each point successfully, but it is obvious an open loop control. 
+		When I did the code preparation for this lab, my robot works pretty good. And it can move straight and then make a turn accurately.
+		But when I trying to record the video, the code has some issues. 
+		The problem is that the robot can not do any movement after I run the command for moving straight. 
+		I tried to Serial.print the data, and I realize it is because of the robot will stop moving at a weird point, 
+		which does not satisfy the distance I set in the Python code, so the loop will not stop and the move_forward command can not stop.
+		Therefore, the robot can not execute the next command. 
+		I tried to ask some of the TAs, and still can not figure out the problems. 
+		Due to the time constraint, I just to choose to add an extra command to execuate the open loop control to try to mimic my result. 
 	<iframe width="560" height="315"  
-  	src="https://www.youtube.com/embed/"  
+  	src="https://www.youtube.com/embed/fBupaoYB-4k"  
   	frameborder="0" allowfullscreen></iframe>
 		
 		
